@@ -4,6 +4,7 @@ body{
   font-family: "Open Sans", sans-serif;
   height:2000px;
   color: #26272a;
+  background-color: grey;
 }
 
 ul,ol{
@@ -35,10 +36,18 @@ br{
   }
 }
 
+header.navbar{
+  height: 115px;
+  background: url('../img/header_menu_bg.png') center no-repeat;
+  .container{
+    background-color: white;
+  }
+}
+
 .region-top-left, .block-multiblock{
 
   i{
-    color: #f19f00;
+    color: @b-orange;
     padding: 0 6px;
     font-size: 24px;
     &:hover{
@@ -46,7 +55,6 @@ br{
     }
   }
 }
-
 
 nav{
   padding: 22px 0;
@@ -65,79 +73,19 @@ nav{
   }
 }
 
-#slick-views-events-1-slider{
-  overflow: hidden;
-  position: relative;
 
-
-}
-.slick-track{
-  display: flex;
-
-  .slick__slide{
-
-    .slide__content{
-      position: relative;
-      text-align: center;
-
-      .views-field-title{
-        font-size: 7px;
-        text-transform: uppercase;
-        font-weight: 700;
-        line-height: 90px;
-        position: absolute;
-        z-index: 2;
-        top: 140px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        .d-shadow(0, 0, 5px, 0, 30%);
-
-        a{
-          color:white;
-        }
-      }
-
-      .views-field-field-event-date, .views-field-field-event-place{
-        color: #afb6c3;
-        position: absolute;
-        top: 360px;
-        font-size: 20px;
-        padding: 10px 24px;
-        .d-shadow(0, 0, 5px, 0, 30%);
-      }
-      .views-field-field-event-date{
-
-        span{
-          &:before{
-            content:"\f133";
-            padding-right: 10px;
-          }
-        }
-
-        left: 38%;
-      }
-      .views-field-field-event-place{
-        right:38%;
-
-        span{
-          &:before{
-            font-family: "FontAwesome";
-            content:"\f041";
-            padding-right: 10px;
-          }
-        }
-      }
-    }
-  }
-}
 .view-events.view-display-id-block_1{
   position: relative;
+  overflow: hidden;
+
+  .slick-dots{
+    display: none!important;
+  }
 
   &:before{
+    .d-shadow(0px, 9px, 5px, 0, 30%);
     width: 100%;
     height: 40px;
-    overflow: hidden;
     position: absolute;
     content: "";
     background: url('../img/events_top_bg.png') no-repeat top;
@@ -146,13 +94,12 @@ nav{
     z-index: 1;
   }
   &:after{
-    z-index: 1;
+    .d-shadow(0px, -9px, 5px, 0, 30%);
     width: 100%;
     height: 40px;
     position: absolute;
-    overflow: hidden;
-    bottom: 0;
-    left: 0;
+    bottom:0;
+    left:0;
     content: "";
     background: url('../img/events_bottom_bg.png') no-repeat bottom;
   }
@@ -161,24 +108,101 @@ nav{
     margin: auto;
     position: absolute;
     z-index: 1;
-
     top: 30px;
     left: 0;
     right: 0;
     width: 100%;
     text-align: center;
 
+    h2{
+      font-size: 36px;
+      color: #ffa800;
+      text-transform: uppercase!important;
+      font-weight: 500;
+    }
+
     p{
       font-size: 20px;
       color: #afb6c3;
+      .d-shadow(0, 0, 5px, 0, 30%);
+    }
+  }
 
+  .slide__content{
+    position: relative;
+    text-align: center;
+
+    .views-field-title{
+      font-size: 70px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 90px;
+      position: absolute;
+      z-index: 2;
+      top: 140px;
+      left: 0;
+      bottom: 0;
+      right: 0;
       .d-shadow(0, 0, 5px, 0, 30%);
 
-      &:first-line{
-        font-size: 36px;
-        color: #ffa800;
-        text-transform: uppercase!important;
-        font-weight: 500;
+      a{
+        color:white;
+      }
+    }
+
+    .views-field-field-event-photo{
+      min-height: 500px;
+      position: relative;
+
+      img{
+        width: 100%;
+      }
+
+      &:before{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        content: "";
+        background-color: rgba(0,0,0,0.4);
+        height: 100%;
+      }
+    }
+
+    .views-field-field-event-date, .views-field-field-event-place{
+      color: #afb6c3;
+      position: absolute;
+      top: 360px;
+      font-size: 20px;
+      padding: 10px 24px;
+      .d-shadow(0, 0, 5px, 0, 30%);
+      z-index: 2;
+    }
+
+    .views-field-field-event-date{
+      left: 37%;
+
+      span{
+        &:before{
+          font-family: "FontAwesome", sans-serif;
+          content:"\f133";
+          padding-right: 10px;
+          color: @b-orange;
+        }
+      }
+    }
+
+    .views-field-field-event-place{
+      right:37%;
+
+      div{
+        &:before{
+          font-family: "FontAwesome", sans-serif;
+          content:"\f041";
+          padding-right: 10px;
+          color: @b-orange;
+        }
       }
     }
   }
@@ -246,7 +270,6 @@ nav{
 footer {
   background: url('../img/footer_bg.png') center no-repeat;
   padding:40px;
-  margin-top: 40px;
   height: 183px;
 
   & > div {
@@ -284,9 +307,30 @@ footer {
 .fa-fw{
   width:inherit!important;
 }
+.slick-track {
+  display: flex;
+}
 
+.container{
+  background-color: #fdfdfd;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.page-header{
+  display: none;
+}
+
+.home-header.container{
+  padding-top: 50px;
+}
 
 @b-red: #f42434;
+@b-orange: #f19f00;
 
 
 .b-radius(@radius){
@@ -308,9 +352,7 @@ footer {
 }
 .d-shadow(@x, @y, @blur, @color, @alpha) {
   -webkit-filter: drop-shadow(@x @y @blur rgba(@color, @color, @color, @alpha));
-  -moz-filter: drop-shadow(@x @y @blur rgba(@color, @color, @color, @alpha));
   -ms-filter: drop-shadow(@x @y @blur rgba(@color, @color, @color, @alpha));
-  -o-filter: drop-shadow(@x @y @blur rgba(@color, @color, @color, @alpha));
   filter: drop-shadow(@x @y @blur rgba(@color, @color, @color, @alpha));
 }
 
