@@ -1,3 +1,11 @@
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 body{
   font-family: "Open Sans", sans-serif;
   color: #26272a;
@@ -33,6 +41,10 @@ br{
   }
 }
 
+.no-padding {
+  padding: 0;
+}
+
 header.navbar {
   height: 115px;
   background: url('../img/header_menu_bg.png') center no-repeat;
@@ -50,7 +62,12 @@ header.navbar {
   }
 }
 
+.menu.navbar-nav {
+  @include flexbox();
+}
+
 nav{
+  float: left;
   padding: 22px 0;
 
   ul{

@@ -92,7 +92,7 @@
 
     <div class="row">
       <div class="col-sm-2"><?php print render($page['top_left']); ?></div>
-      <div class="col-sm-8">
+      <div class="col-sm-8 no-padding">
         <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
           <div class="navbar-collapse collapse" id="navbar-collapse">
             <nav role="navigation">
@@ -133,7 +133,7 @@
 <div class="main-container">
 
 
-  
+
   <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
