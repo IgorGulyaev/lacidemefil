@@ -1,14 +1,115 @@
 //-------------------------------------
-//              Header
+//              Defaults
 //-------------------------------------
 
+
+// -------- Elements --------
+html{
+  background-color: grey;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+  color: #26272a;
+  background-color: white;
+  margin: auto;
+}
+ul,ol{
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+a:hover,a:active,a:focus{
+  text-decoration: none;
+  color: @b-red !important;
+}
+br{
+  display: none;
+}
+
+
+// -------- Styles ---------
+.container{
+  width:100%;
+}
+.btn, .btn:hover, .btn:active, .btn:focus{
+  .b-radius(40px);
+  text-transform: uppercase;
+  color: white!important;
+  .trans(0.1s);
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover{
+    .b-shadow(0px, 2px, 8px, 0, 20%);
+    .trans(0.1s);
+
+  }
+}
+.flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.no-padding {
+  padding: 0;
+}
+
+.fa-fw{
+  width:inherit!important;
+}
+.slick-track {
+  .flexbox;
+}
+.container{
+  /*
+  background-color: #fdfdfd;
+  padding-left: 0;
+  padding-right: 0;
+  */
+}
+.main-container{
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.page-header{
+  display: none;
+}
+.main-container, .home-header.container{
+  padding-top: 60px;
+  min-height: 1100px;
+}
+
+
+
+
+
+//-------------------------------------
+//              Header
+//-------------------------------------
 
 header.navbar {
   height: 115px;
   background: url('../img/header_menu_bg.png') center no-repeat;
+
+
+
+  & .container > .row {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .region-top-left, .block-multiblock{
+  text-align: center;
   i{
     color: @b-orange;
     padding: 0 6px;
@@ -19,17 +120,29 @@ header.navbar {
   }
 }
 
+.navbar-collapse{
+  text-align: center;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a{
+  background-color: transparent;
+  color: #26272a;
+}
+.nav > li > a{
+  padding: 10px 15px;
+  &.menu_icon{
+    padding: 10px 20px;
+  }
+}
+
 .menu.navbar-nav {
   .flexbox;
 }
 
 nav{
-  float: left;
   padding: 22px 0;
+  display: inline-block;
 
   ul{
-
-
     a{
       color: #26272a;
       padding: 0 24px 0 0;
@@ -238,7 +351,7 @@ nav{
   }
 
   a.btn{
-    margin: 0 20px;
+    margin: 5px 20px;
     padding: 20px 0;
     width: 220px;
     border-color: transparent;
@@ -423,8 +536,8 @@ footer.footer {
   padding:40px;
   height: 183px;
 
-  & > div {
-    .flexbox;
+  & .container > .row {
+    display: flex;
     align-items: center;
   }
 
@@ -448,100 +561,124 @@ footer.footer {
 
 
 
+
+
+
 //-------------------------------------
-//              Defaults
+//            Child | page
 //-------------------------------------
 
-// -------- Elements --------
-html{
-  background-color: grey;
-}
-body{
-  font-family: "Open Sans", sans-serif;
-  color: #26272a;
-  background-color: white;
-  width: 1400px;
-  margin: auto;
-}
-ul,ol{
-  list-style-type: none;
-  margin: 0;
-}
-a:hover,a:active,a:focus{
-  text-decoration: none;
-  color: @b-red !important;
-}
-br{
-  display: none;
-}
+.node-type-child{
+  .slick--optionset--child-gallery{
+    .slick-track{
+      margin: 0;
+    }
 
+    .slick__arrow{
+      width: 100%;
+      top: 50%;
+      position: absolute;
+      padding:0;
 
-// -------- Styles ---------
-.btn, .btn:hover, .btn:active, .btn:focus{
-  .b-radius(40px);
-  text-transform: uppercase;
-  color: white!important;
-  .trans(0.1s);
-  padding: 8px 22px;
-  font-size: 16px;
-  font-weight: 600;
+      .slick-prev.slick-arrow{
+        position: absolute;
+        left:0;
+      }
+      .slick-next.slick-arrow{
+        position: absolute;
+        right:0;
+      }
+    }
+  }
 
-  &:hover{
-    .b-shadow(0px, 2px, 8px, 0, 20%);
-    .trans(0.1s);
+  .field-name-field-node-display-title{
+    text-align: center;
 
+    div{
+      display: inline-block;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+  .group-child-info{
+    padding: 0 100px;
+
+    .group-child-left{
+      text-align: center;
+      font-size: 20px;
+
+      & > div{
+        display: inline-block;
+        margin:20px 5px;
+      }
+    }
+
+    .group-child-right{
+      font-size:18px;
+      font-weight: 500;
+    }
+  }
+
+  .field-type-text-with-summary{
+    p{
+      padding:50px;
+      font-size:17px;
+    }
   }
 }
-.flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-.no-padding {
-  padding: 0;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
-  background-color: transparent;
-}
-.nav > li > a{
-  padding: 10px 12px;
-}
-.fa-fw{
-  width:inherit!important;
-}
-.slick-track {
-  .flexbox;
-}
-.container{
-  /*
-  background-color: #fdfdfd;
-  padding-left: 0;
-  padding-right: 0;
-  */
-}
-.main-container.container{
-  padding-left: 0;
-  padding-right: 0;
-}
 
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-}
-.page-header{
-  display: none;
-}
-.main-container, .home-header.container{
-  padding-top: 60px;
-  min-height: 1100px;
-}
+
+
+
+
 
 
 // ------- Variables --------
 @b-red: #f42434;
 @b-orange: #f19f00;
+
+@media all and (min-width: 1420px){
+  body, header > .container{
+    width: 1400px;
+  }
+}
+@media all and (max-width: 1420px){
+
+  body, header{
+    width: 100%;
+  }
+
+  .node-type-child {
+    .slick--optionset--child-gallery {
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 1170px) {
+
+  nav {
+    ul {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+@media all and (max-width: 768px) {
+  .view-hp-info-blocks {
+    li{
+      min-height: 100px;
+      width:100%;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
 
 
 .b-radius(@radius){
