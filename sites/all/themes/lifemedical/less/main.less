@@ -1,49 +1,7 @@
-.flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
+//-------------------------------------
+//              Header
+//-------------------------------------
 
-body{
-  font-family: "Open Sans", sans-serif;
-  color: #26272a;
-  background-color: #fdfdfd;
-}
-
-ul,ol{
-  list-style-type: none;
-  margin: 0;
-}
-a:hover,a:active,a:focus{
-  text-decoration: none;
-  color: @b-red !important;
-}
-
-br{
-  display: none;
-}
-
-.btn, .btn:hover, .btn:active, .btn:focus{
-  .b-radius(40px);
-  text-transform: uppercase;
-  color: white!important;
-  .trans(0.1s);
-  padding: 8px 22px;
-  font-size: 16px;
-  font-weight: 600;
-
-  &:hover{
-    .b-shadow(0px, 2px, 8px, 0, 20%);
-    .trans(0.1s);
-
-  }
-}
-
-.no-padding {
-  padding: 0;
-}
 
 header.navbar {
   height: 115px;
@@ -51,7 +9,6 @@ header.navbar {
 }
 
 .region-top-left, .block-multiblock{
-
   i{
     color: @b-orange;
     padding: 0 6px;
@@ -84,6 +41,16 @@ nav{
   }
 }
 
+.home-header{
+  padding-top: 40px;
+}
+
+
+
+
+//-------------------------------------
+//        Events carousel block
+//-------------------------------------
 
 .view-events.view-display-id-block_1{
   position: relative;
@@ -235,6 +202,13 @@ nav{
   }
 }
 
+
+
+
+//-------------------------------------
+//          Information block
+//-------------------------------------
+
 .view-hp-info-blocks{
   text-align: center;
   position: relative;
@@ -277,6 +251,13 @@ nav{
     }
   }
 }
+
+
+
+
+//-------------------------------------
+//      Children carousel block
+//-------------------------------------
 
 #block-views-hp-children-block{
   & > h2{
@@ -372,6 +353,13 @@ nav{
   }
 }
 
+
+
+
+//-------------------------------------
+//      News and friend carousels
+//-------------------------------------
+
 .home-bottom{
   width: 100%;
   #block-views-news-slider-block{
@@ -424,6 +412,12 @@ nav{
 }
 
 
+
+
+//-------------------------------------
+//            Footer block
+//-------------------------------------
+
 footer.footer {
   background: url('../img/footer_bg.png') center no-repeat #fdfdfd;
   padding:40px;
@@ -453,25 +447,79 @@ footer.footer {
 
 
 
+
+//-------------------------------------
+//              Defaults
+//-------------------------------------
+
+// -------- Elements --------
+html{
+  background-color: grey;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+  color: #26272a;
+  background-color: white;
+  width: 1400px;
+  margin: auto;
+}
+ul,ol{
+  list-style-type: none;
+  margin: 0;
+}
+a:hover,a:active,a:focus{
+  text-decoration: none;
+  color: @b-red !important;
+}
+br{
+  display: none;
+}
+
+
+// -------- Styles ---------
+.btn, .btn:hover, .btn:active, .btn:focus{
+  .b-radius(40px);
+  text-transform: uppercase;
+  color: white!important;
+  .trans(0.1s);
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover{
+    .b-shadow(0px, 2px, 8px, 0, 20%);
+    .trans(0.1s);
+
+  }
+}
+.flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.no-padding {
+  padding: 0;
+}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
   background-color: transparent;
 }
 .nav > li > a{
   padding: 10px 12px;
 }
-
-
 .fa-fw{
   width:inherit!important;
 }
 .slick-track {
   .flexbox;
 }
-
 .container{
+  /*
   background-color: #fdfdfd;
- /* padding-left: 0;
-  padding-right: 0;*/
+  padding-left: 0;
+  padding-right: 0;
+  */
 }
 .main-container.container{
   padding-left: 0;
@@ -485,11 +533,13 @@ footer.footer {
 .page-header{
   display: none;
 }
-
 .main-container, .home-header.container{
   padding-top: 60px;
+  min-height: 1100px;
 }
 
+
+// ------- Variables --------
 @b-red: #f42434;
 @b-orange: #f19f00;
 
