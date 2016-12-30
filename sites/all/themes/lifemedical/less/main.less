@@ -88,6 +88,32 @@ br{
   min-height: 1100px;
 }
 
+.slick-arrow{
+  margin-top: -6%;
+  background-color: transparent;
+  padding: 50px 20px;
+  display: block;
+  font-size: 40px;
+  outline: none;
+  border: none;
+
+}
+.slick__arrow{
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  padding:0;
+
+  .slick-prev.slick-arrow{
+    position: absolute;
+    left:0;
+  }
+  .slick-next.slick-arrow{
+    position: absolute;
+    right:0;
+  }
+}
+
 
 
 
@@ -168,6 +194,10 @@ nav{
 .view-events.view-display-id-block_1{
   position: relative;
   overflow: hidden;
+
+  .slick__arrow{
+    color:white;
+  }
 
   .slick-dots{
     display: none!important;
@@ -298,21 +328,6 @@ nav{
     }
   }
 
-  .slick__arrow{
-    width: 100%;
-    top: 50%;
-    position: absolute;
-    padding:0;
-
-    .slick-prev.slick-arrow{
-      position: absolute;
-      left:0;
-    }
-    .slick-next.slick-arrow{
-      position: absolute;
-      right:0;
-    }
-  }
 }
 
 
@@ -375,6 +390,10 @@ nav{
 #block-views-hp-children-block{
   & > h2{
     position:absolute;
+  }
+
+  .slick__arrow{
+    color:white;
   }
 
   .view-hp-children.view-display-id-block{
@@ -448,22 +467,6 @@ nav{
     color: white;
     text-align: left;
   }
-
-  .slick__arrow{
-    width: 100%;
-    top: 50%;
-    position: absolute;
-    padding:0;
-
-    .slick-prev.slick-arrow{
-      position: absolute;
-      left:0;
-    }
-    .slick-next.slick-arrow{
-      position: absolute;
-      right:0;
-    }
-  }
 }
 
 
@@ -475,11 +478,39 @@ nav{
 
 .home-bottom{
   width: 100%;
-  #block-views-news-slider-block{
-    border-right: 1px dashed #d6dae0;
+  margin-bottom: 30px;
+
+  h2{
+    font-size: 36px;
+    color: #202123;
+    text-transform: uppercase;
+    margin: 15px !important;
+  }
+
+  .region{
     position: relative;
+  }
+
+  .col-sm-6{
+    text-align: center;
+    border-right: 1px dashed #d6dae0;
+    & + .col-sm-6{
+      vertical-align: top;
+      border:none;
+    }
+
+  }
+  #block-views-news-slider-block{
+    position: relative;
+
     .slick-dots{
       display: none!important;
+    }
+    .view-news-slider{
+      .view-content{
+        text-align: initial;
+        height:330px;
+      }
     }
 
     .slide__content{
@@ -503,26 +534,41 @@ nav{
       }
     }
 
-    .slick__arrow{
-      width: 100%;
-      top: 50%;
-      position: absolute;
-      padding:0;
-
-      .slick-prev.slick-arrow{
-        position: absolute;
-        left:0;
-      }
-      .slick-next.slick-arrow{
-        position: absolute;
-        right:0;
-      }
-    }
     .slick-list.draggable{
       min-height:220px!important;
     }
   }
+
+
+  .view-our-friends {
+    .view-content {
+      text-align: initial;
+      height: 330px;
+    }
+  }
+
+
+  .slick__slider{
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .grid__content{
+    background-color: #f2f4f8;;
+    border-radius: 20px;
+    width: 220px;
+    height: 140px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .slick__arrow{
+    top: 45%;
+  }
 }
+
+
 
 
 
@@ -532,7 +578,7 @@ nav{
 //-------------------------------------
 
 footer.footer {
-  background: url('../img/footer_bg.png') center no-repeat #fdfdfd;
+  background: url('../img/footer_bg.png') center no-repeat;
   padding:40px;
   height: 183px;
 
@@ -572,22 +618,6 @@ footer.footer {
   .slick--optionset--child-gallery{
     .slick-track{
       margin: 0;
-    }
-
-    .slick__arrow{
-      width: 100%;
-      top: 50%;
-      position: absolute;
-      padding:0;
-
-      .slick-prev.slick-arrow{
-        position: absolute;
-        left:0;
-      }
-      .slick-next.slick-arrow{
-        position: absolute;
-        right:0;
-      }
     }
   }
 
@@ -633,6 +663,32 @@ footer.footer {
 
 
 
+//-------------------------------------
+//            Child | page
+//-------------------------------------
+
+.page-about{
+  .panels-flexible-region-2-center{
+    width:100%;
+  }
+  .panel-pane.pane-node{
+    text-align: center;
+
+    h2{
+      display: inline-block;
+    }
+
+    .pane-content{
+      text-align: left;
+      padding: 60px;
+      background-color: #f9f9f9;
+      font-size: 17px;
+    }
+  }
+}
+
+
+
 
 // ------- Variables --------
 @b-red: #f42434;
@@ -675,6 +731,12 @@ footer.footer {
       width:100%;
       align-items: center;
       display: flex;
+    }
+  }
+  .home-bottom {
+    .col-sm-6 {
+       border-right: none;
+       border-bottom: 1px dashed #d6dae0;
     }
   }
 }
