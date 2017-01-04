@@ -98,11 +98,15 @@ br{
   border: none;
 
 }
+.slick{
+  position: relative;
+}
 .slick__arrow{
   width: 100%;
   top: 50%;
   position: absolute;
   padding:0;
+
 
   .slick-prev.slick-arrow{
     position: absolute;
@@ -615,6 +619,11 @@ footer.footer {
 //-------------------------------------
 
 .node-type-child{
+
+  .slick__arrow{
+    color:white;
+  }
+
   .slick--optionset--child-gallery{
     .slick-track{
       margin: 0;
@@ -664,7 +673,7 @@ footer.footer {
 
 
 //-------------------------------------
-//            Child | page
+//            About | page
 //-------------------------------------
 
 .page-about{
@@ -686,6 +695,66 @@ footer.footer {
     }
   }
 }
+
+
+
+//-------------------------------------
+//            Children | page
+//-------------------------------------
+
+.page-children{
+  .view-header{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .views-row{
+    border-top: 1px solid #c8c8c8;
+    padding: 80px;
+  }
+
+  .views-field-title a{
+    font-size:40px;
+    font-weight: 700;
+    color:#212121;
+  }
+
+  .child-info{
+
+    & > div{
+      font-size: 18px;
+      font-weight: 600;
+      display: inline-block;
+      color: #8a8989;
+      margin: 0 10px 0 0;
+    }
+  }
+
+
+  .views-field-field-child-description{
+    font-size: 18px;
+    color:#212121;
+    margin: 20px 0;
+  }
+
+
+  .views-field-field-child-photo {
+    text-align: right;
+    margin-right: 50px;
+
+    .field-content{
+      display: inline-block;
+      .b-radius(150px);
+      max-width: 300px;
+
+      img{
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
 
 
 
