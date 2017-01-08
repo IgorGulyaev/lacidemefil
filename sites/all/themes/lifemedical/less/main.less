@@ -462,7 +462,37 @@ nav{
     padding: 10px 24px;
     color: #afb6c3;
     text-align: left;
+    position: relative;
   }
+
+  .views-field-field-city{
+    &:before{
+      color:@b-orange;
+      position: absolute;
+      left:0;
+      font-family: "FontAwesome", sans-serif;
+      content:"\f041";
+    }
+  }
+  .views-field-field-age{
+    &:before{
+      color:@b-orange;
+      position: absolute;
+      left:0;
+      font-family: "FontAwesome", sans-serif;
+      content:"\f05a";
+    }
+  }
+  .views-field-field-diagnosis{
+    &:before{
+      color:@b-orange;
+      position: absolute;
+      left:0;
+      font-family: "FontAwesome", sans-serif;
+      content:"\f0fa";
+    }
+  }
+
 
   .views-field-body{
     margin: 0 auto;
@@ -565,6 +595,25 @@ nav{
     padding: 20px;
     margin: 10px auto;
     text-align: center;
+    position: relative;
+
+    .views-field-field-friend-logo{
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: none;
+
+      img{
+        height: 140px;
+        width: 220px;
+        .b-radius(20px);
+      }
+    }
+    &:hover{
+      .views-field-field-friend-logo{
+        display: block;
+      }
+    }
   }
 
   .slick__arrow{
@@ -622,6 +671,13 @@ footer.footer {
 
   .slick__arrow{
     color:white;
+  }
+  .media--image{
+    height:100%;
+  }
+  .slick-slide img{
+    width: 100%;
+    height:100%;
   }
 
   .slick--optionset--child-gallery{
@@ -756,6 +812,82 @@ footer.footer {
 }
 
 
+
+
+
+//-------------------------------------
+//            Partners | page
+//-------------------------------------
+
+.view-our-friends{
+  .views-row{
+    width: 33%;
+    float: left;
+    /*height: 200px;*/
+    @media all and (max-width:  768px){
+      width:100%;
+    }
+
+    .views-field-field-friend-logo{
+      img{
+        .b-radius(150px);
+      }
+    }
+
+    .views-field-name{
+      margin:15px 0;
+      a{
+        color:black;
+        font-size: 30px;
+      }
+    }
+
+    .views-field-field-friend-link{
+      margin:15px 0;
+      a{
+        color:#777777;
+      }
+    }
+  }
+
+}
+
+
+
+
+//-------------------------------------
+//            News | page
+//-------------------------------------
+
+.page-news{
+  .views-row{
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .views-field-field-news-photo a{
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .views-field-created{
+    color:#777777;
+    font-size: 14px;
+  }
+
+  .views-fieldset{
+    .views-field-title a{
+      font-size:24px;
+      color:black;
+    }
+    .views-field-body, .views-field-view-node{
+      text-align: left;
+      a{
+        color:black;
+      }
+    }
+  }
+}
 
 
 
