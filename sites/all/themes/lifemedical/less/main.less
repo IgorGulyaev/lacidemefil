@@ -132,7 +132,9 @@ br{
 
 header.navbar {
   height: 115px;
-  background: url('../img/header_menu_bg.png') center no-repeat;
+  background: url('../img/header_menu_bg.png') center bottom no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 
 
 
@@ -1163,7 +1165,7 @@ footer.footer {
 @b-orange: #f19f00;
 
 @media all and (min-width: 1420px){
-  body, header > .container{
+  header > .container{
     width: 1400px;
   }
 }
