@@ -167,7 +167,9 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <div class="container">
-        <?php print render($page['content']); ?>
+        <div class="row">
+          <?php print render($page['content']); ?>
+        </div>
       </div>
       <?php if (drupal_is_front_page()): ?>
         <div class="home-bottom <?php print $container_class; ?>">

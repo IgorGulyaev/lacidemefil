@@ -89,7 +89,7 @@ br{
 }
 .main-container, .home-header.container{
   padding-top: 80px;
-  min-height: 1050px;
+  /*min-height: 1050px;*/
 }
 
 .slick-arrow{
@@ -122,6 +122,20 @@ br{
   }
 }
 
+
+/* HP */
+.front {
+  .main-container {
+    &> .row {
+      &> section {
+        .container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* End HP */
 
 
 
@@ -253,6 +267,8 @@ nav{
     position: absolute;
     content: "";
     background: url('../img/events_top_bg.png') no-repeat top;
+    -webkit-background-size: cover;
+    background-size: cover;
     top: 0;
     left: 0;
     z-index: 1;
@@ -266,6 +282,8 @@ nav{
     left:0;
     content: "";
     background: url('../img/events_bottom_bg.png') no-repeat bottom;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 
   .view-header{
