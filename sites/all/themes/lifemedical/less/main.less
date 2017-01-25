@@ -28,9 +28,9 @@ br{
 
 
 // -------- Styles ---------
-.container{
+/*.container{
   width:100%;
-}
+}*/
 .btn, .btn:hover, .btn:active, .btn:focus{
   .b-radius(40px);
   text-transform: uppercase;
@@ -128,7 +128,7 @@ br{
   .main-container {
     &> .row {
       &> section {
-        .container {
+        &> .container {
           width: 100%;
         }
       }
@@ -720,7 +720,9 @@ nav{
 //-------------------------------------
 
 footer.footer {
-  background: url('../img/footer_bg.png') center no-repeat;
+  background: url('../img/footer_bg.png') center top no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
   padding:40px;
   height: 183px;
 
