@@ -166,7 +166,7 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <div class="container">
+      <div class="">
         <div class="row">
           <?php print render($page['content']); ?>
         </div>
