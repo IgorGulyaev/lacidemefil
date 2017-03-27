@@ -164,9 +164,9 @@
         <?php print render($page['help']); ?>
       <?php endif; ?>
       <?php if (!empty($action_links)): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
+        <ul class="action-links"><?php print render($action_linkscontainer); ?></ul>
       <?php endif; ?>
-      <div class="container">
+      <div class="container-block">
         <div class="row">
           <?php print render($page['content']); ?>
         </div>

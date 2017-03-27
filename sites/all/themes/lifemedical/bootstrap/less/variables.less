@@ -301,10 +301,18 @@
 //** Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop:          @screen-lg-min;
 
+// Extra Large screen / wide desktop
+//** Deprecated `@screen-xlg` as of v3.0.1
+@screen-xlg:                  1420px;
+@screen-xlg-min:              @screen-xlg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-xlg-desktop:          @screen-xlg-min;
+
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xlg-min - 1);
 
 
 //== Grid system
@@ -341,6 +349,10 @@
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 
+// Extra Large screen / wide desktop
+@container-xlarge-desktop:      (1400px + @grid-gutter-width);
+//** For `@screen-xlg-min` and up.
+@container-xlg:                 @container-xlarge-desktop;
 
 //== Navbar
 //
