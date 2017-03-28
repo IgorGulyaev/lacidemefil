@@ -51,6 +51,10 @@ br{
   background: #e71c2c;
   border-color: transparent;
 }
+.btn-warning {
+  background: #f19f00;
+  border-color: transparent;
+}
 
 .flexbox {
   display: -webkit-box;
@@ -637,6 +641,8 @@ nav{
     .view-news-slider{
 
       .view-header{
+        position: relative;
+        margin-bottom: 15px;
         a{
           text-decoration: underline;
           text-transform: capitalize;
@@ -644,6 +650,18 @@ nav{
           color: #8e95a1;
           font-size: 18px;
           margin: 20px 0;
+        }
+        &:after{
+          content: "";
+          background: url("../img/heart.png") no-repeat center center;
+          height:12px;
+          width:400px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+          display: block;
+          margin: 0 auto;
         }
       }
 
@@ -688,6 +706,32 @@ nav{
 
 
   .view-our-friends {
+
+    .view-header{
+      position: relative;
+      margin-bottom: 15px;
+      a{
+        text-decoration: underline;
+        text-transform: capitalize;
+        display: block;
+        color: #8e95a1;
+        font-size: 18px;
+        margin: 20px 0;
+      }
+      &:after{
+        content: "";
+        background: url("../img/heart.png") no-repeat center center;
+        height:12px;
+        width:400px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
     .view-content {
       text-align: initial;
       height: 330px;
