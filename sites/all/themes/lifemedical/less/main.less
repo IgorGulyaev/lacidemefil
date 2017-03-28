@@ -346,17 +346,32 @@ nav{
     position: relative;
     text-align: center;
 
+    .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 40px;
+      height: 100%;
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
     .views-field-title{
       font-size: 70px;
       text-transform: uppercase;
       font-weight: 700;
       line-height: 90px;
-      position: absolute;
-      z-index: 2;
-      top: 140px;
-      left: 0;
-      bottom: 0;
-      right: 0;
       .d-shadow(0, 0, 5px, 0, 30%);
 
       a{
@@ -384,19 +399,29 @@ nav{
       }
     }
 
+    .details {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
     .views-field-field-event-date, .views-field-field-event-place{
       color: #afb6c3;
-      position: absolute;
-      top: 360px;
       font-size: 20px;
       padding: 10px 24px;
       .d-shadow(0, 0, 5px, 0, 30%);
-      z-index: 2;
     }
 
     .views-field-field-event-date{
-      left: 37%;
-
       span{
         &:before{
           font-family: "FontAwesome", sans-serif;
@@ -408,7 +433,6 @@ nav{
     }
 
     .views-field-field-event-place{
-      right:37%;
 
       div{
         &:before{
