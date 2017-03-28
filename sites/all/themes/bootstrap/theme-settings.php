@@ -233,7 +233,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_i
     '#group' => 'bootstrap',
   );
 
-  /*// Breadcrumbs.
+  // Breadcrumbs.
   $form['components']['breadcrumbs'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumbs'),
@@ -282,7 +282,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_i
         ),
       ),
     );
-  }*/
+  }
 
   // Navbar.
   $form['components']['navbar'] = array(
