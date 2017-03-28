@@ -46,6 +46,12 @@ br{
 
   }
 }
+
+.btn-danger {
+  background: #e71c2c;
+  border-color: transparent;
+}
+
 .flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -55,6 +61,24 @@ br{
 }
 .no-padding {
   padding: 0;
+}
+
+.breadcrumb {
+  background: none;
+  color: #8e95a1;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  a {
+    color: #8e95a1;
+    text-decoration: none;
+  }
+  .delimiter {
+    margin: 0 5px;
+    color: #f19f00;
+    font-family: 'FontAwesome';
+    font-size: 12px;
+  }
 }
 
 .fa-fw{
@@ -665,6 +689,15 @@ nav{
       text-align: initial;
       height: 330px;
     }
+    .view-footer {
+      padding: 10px 0 20px;
+      span {
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle;
+        color: #8e95a1;
+      }
+    }
   }
 
 
@@ -674,7 +707,7 @@ nav{
   }
 
   .grid__content{
-    background-color: #f2f4f8;;
+    background-color: #f2f4f8;
     border-radius: 20px;
     width: 220px;
     height: 140px;
